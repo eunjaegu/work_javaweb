@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+ 
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <title>this.id로 DOM 요소의 id 속성 가져오기</title>
+
+    <style type="text/css">
+
+        .redColor{ color:Red }
+
+    </style>
+
+    <script src="jquery-1.6.2.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+
+            $('#dnk').bind('click', function() {
+                $('#mainMenu .redColor').removeClass('redColor'); //
+                $(this).addClass('redColor'); // 
+
+            });
+
+
+            $('#mainMenu .redColor').bind("click", function() {
+                if (this.id == "va") {
+                    alert("비주얼 아카데미 클릭");
+                }
+                else if (this.id == "ll") {
+                    alert($(this).text()); // 
+                }
+
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="mainMenu">
+        <div id="dnk" class="redColor">닷넷코리아</div>
+        <div id="va" class="redColor">비주얼아카데미</div>
+        <div id="ll" class="redColor">라이선스랜드</div>
+    </div>
+</body>
+
+</html>

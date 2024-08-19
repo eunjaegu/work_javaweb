@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<!-- setter -->
+	<bean id="personService" class="com.ej.spring.ex01.PersonServiceImpl" >
+		<property name="name">
+			<value>구은재</value>
+		</property>
+	</bean>
+	
+	<!-- constructor1 -->
+	<bean id="personService2" class="com.ej.spring.ex01.PersonServiceImpl" >
+	<constructor-arg value="강기훈2"/>
+	</bean>
+	
+	<!-- constructor2 -->
+	<bean id="personService3" class="com.ej.spring.ex01.PersonServiceImpl" >
+	<constructor-arg value="강기훈3" />
+	<constructor-arg value="30" />
+	</bean>
+
+</beans>

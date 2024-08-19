@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Hellp World jQuery!!!</title>
+
+    <style type="text/css">
+        .bg { background-color:Yellow; }
+        .sil{ background-color:Silver; }
+    </style>
+
+    <script src="jquery-1.6.2.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function() { // 페이지가 준비되었을 때
+            $('#hw').addClass("bg");// hw라는 id속성으로 가져와 그것에 bg CSS 클래스 적용 
+            $('#hw').click(function() { alert('안녕'); $(this).addClass("sil"); });
+        });
+
+    </script>
+
+</head>
+
+<body>
+ <div style="background-color:Yellow;" onclick="alert('안녕');">  
+    안녕하세요. jQuery!!!!!!!!!!!!!!! (div태그에 직접 CSS적용)
+ </div> 
+
+ <div class="bg">
+    안녕하세요. jQuery입니다.. (head부분에 bg라는 이름으로 CSS클래스를 만들어 불러오기)
+ </div>
+
+ <div id="hw">
+    안녕하세요. jQuery입니다.. (head부분에 bg라는 이름으로 CSS클래스를 만들어 불러오기)
+ </div>
+
+ Body태그 안에 스타일시트, 자바스크립트가 들어오지 않는것이 jQuery의 큰 장점..
+ 자바스크립트를 동적으로 추가해줄수 있다..
+ Body태그가 깔끔해 진다..
+
+</body>
+
+</html>

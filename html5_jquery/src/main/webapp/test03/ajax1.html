@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ajax 연습1 text 전송: ajax1.html</title>
+	<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script>
+		function send(){
+			//1. jQuery 의 ajax() 를 사용하여 요청 /응답
+			$.ajax({
+				type:"get",				// 요청 전송방식	
+				dataType:"text",		// 응답 데이터 타입
+				async:false,
+				url:"http://localhost:9000/html5_jquery/ajaxTest1",
+				data:{param:"Hello jQuery~~~"},
+				
+				success:function(data, textStatus){ //매개변수명
+					$("#message").append(data)		//append함수
+				},
+				
+				error:function(data, textStatus){
+					alert("에러가 발생!!!");
+				},
+				
+				
+				complete:function(data, textStatus){
+					alert("작업 완료!!!");
+				}
+			});		
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="전송" onclick="send()">
+	<div id="message"></div>	<!-- 서버로부터 응답 메시지 출력 -->
+</body>
+</html>

@@ -1,0 +1,8 @@
+127.0.0.1 - - [29/Apr/2024:17:45:12 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [29/Apr/2024:17:45:12 +0900] "GET /dto_dao_board_complete/main.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [29/Apr/2024:17:45:13 +0900] "GET /dto_dao_board_complete/board/boardListServlet HTTP/1.1" 200 3825
+0:0:0:0:0:0:0:1 - - [29/Apr/2024:17:45:13 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [29/Apr/2024:17:45:18 +0900] "GET /dto_dao_board_complete/board/boardListServlet HTTP/1.1" 200 3825
+0:0:0:0:0:0:0:1 - - [29/Apr/2024:17:45:19 +0900] "GET /dto_dao_board_complete/board/boardWriteServlet HTTP/1.1" 200 1339
+127.0.0.1 - - [29/Apr/2024:18:52:16 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [29/Apr/2024:18:52:16 +0900] "GET /dto_dao_board_complete/board/boardList.jsp HTTP/1.1" 200 1860

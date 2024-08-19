@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+ 
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <title>메서드 체인</title>
+
+    <style type="text/css">
+
+        .redColor{ color:Red }
+
+        .blueColor{ color:Blue }
+
+    </style>
+
+    <script src="jquery-1.6.2.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(
+            function() {
+
+                $('td:contains("RedPlus")') 
+                .siblings()
+                .addClass("redColor")
+
+                .parent()
+                .find('td:eq(0)') 
+                .addClass("blueColor");
+
+            }
+        );
+    </script>
+
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>NickName</td><td>이름</td><td>비고</td>
+        </tr>
+
+        <tr>
+            <td>RedPlus</td><td>레드플러스</td><td>닷넷</td>
+        </tr>
+
+        <tr>
+            <td>Hawaso</td><td>하와소</td><td>강의</td>
+        </tr>
+    </table>
+</body>
+
+</html>
+

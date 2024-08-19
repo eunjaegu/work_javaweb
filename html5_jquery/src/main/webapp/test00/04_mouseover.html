@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>04_mouseover.html</title>
+<style>
+	.yellowBorder{
+		background-color:yellow;
+		border:1px solid red;
+	
+	}
+
+</style>
+
+	<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#btnClick')
+			.bind("mouseover", function(){
+				$('#btnClick').addClass('yellowBorder')
+			})
+			.bind("mouseout", function(){
+				$('#btnClick').removeClass('yellowBorder')
+			})
+ 		//	.bind("click", function(){
+ 		//		$('#btnClick').removeClass('yellowBorder')
+		//	})
+		});
+	</script>	
+</head>
+<body>
+	<div id="btnClick">
+		마우스를 올려보세요~
+	</div>
+</body>
+</html>

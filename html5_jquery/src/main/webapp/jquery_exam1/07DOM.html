@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+ 
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <title>DOM 요소 갖어오기</title>
+
+    <script src="jquery-1.6.2.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        // $(document).ready(
+
+        // $().ready(
+
+        $(
+            function() {
+
+                var tagName = $('#dnk').get(0).tagName;
+                alert(tagName);
+
+            }
+        );
+    </script>
+
+</head>
+
+ 
+
+<body>
+    <a href="http://www.dotnetkorea.com/" id="dnk">닷넷코리아</a>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>07_combobox.html</title>
+<style>
+
+</style>
+
+	<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#sel').change(function(){
+				var selectedTxt = $(':selected').text();
+				$('#txt').val(selectedTxt);
+			});
+		});
+	</script>	
+</head>
+<body>
+	<select id="sel">
+		<option>java</option>
+		<option>web</option>
+		<option>spring</option>
+	</select>
+	<hr>
+	<input type="text" id="txt">
+</body>
+</html>

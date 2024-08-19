@@ -1,0 +1,29 @@
+1712110961328	Copy file
+1712110972842	Delete element
+1712110976737	Copy file
+1712111012216	Delete element
+1712111015776	Rename resource 'adminOrder2.jsp'
+1712117010297	Copy file
+1712117019120	Delete element
+1712117022705	Rename resource 'adminOrder.jsp'
+1712118182324	Copy file
+1712118289727	Copy file
+1712118300067	Rename resource 'memList2.jsp'
+1712118305890	Delete element
+1712118490116	Copy file
+1712118715936	Copy file
+1712122131798	Rename package 'model.mall'
+1712123300036	Rename resource 'memModInfo.jsp'
+1712123304485	Move 'adminModInfo.jsp' to 'admin'
+1712123836812	Delete element
+1712123863254	Delete element
+1712124872786	Rename type 'AdminOrderServlet'
+1712126494557	Rename type 'AdminMemberModel'
+1712128273268	Copy compilation units
+1712128279844	Delete elements
+1712129401286	Delete element
+1712129504713	Rename type 'AdminMemberDAO'
+1712130715364	Rename resource 'adminMemberList.jsp'
+1712136133010	Delete element
+1712143549100	Rename type 'AdminMemberModify'
+1712143562310	Rename type 'AdminMemberServlet'

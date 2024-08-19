@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<body>
+	<form action="formtest" method="">
+		<!-- 서블릿 이름 -->
+		<fieldset>
+			<!-- 사각박스 -->
+			<legend>아이디 / 비밀번호 입력 (*필수)</legend>
+			<input type="text" name="ID" required="required" placeholder="아이디입력" />
+			<!-- 한줄짜리 입력창으로 엔터 안먹힘 text는 우리에게 보여줌, placeholder 힌트-->
+			<input type="password" name="PW" required="required"
+				placeholder="비밀번호입력" /> <input type="submit" name="서버전송" />
+		</fieldset>
+
+
+		<fieldset>
+			<legend>성별/취미 (선택)</legend>
+			<input type="radio" value="M" name="rButton">남자 <br> <input
+				type="radio" value="F" name="rButton">여자 <br> <input
+				type="checkbox" value="c1" name="chk">등산 <br> <input
+				type="checkbox" value="c1" name="chk">여행 <br> <input
+				type="checkbox" value="c1" name="chk">서핑 <br>
+		</fieldset>
+
+		<fieldset>
+			<legend>HTML5만 지원</legend>
+			<input type="date" name="date"> 
+			<input type="color" name="color"> 
+			<input type="email" name="email" required="required"> 
+			<input type="url" name="url" required="required"> 
+			<input type="range" name="range" min="0" max="10" step="2"> 
+			<input type="number" name="number" value="1" min="10" max="100" step="1" >
+		</fieldset>
+
+		<fieldset>
+			<legend>콤보박스 / 리스트 메뉴</legend>
+			<select name="selone">
+				<option value="1">02</option>
+				<option value="2">031</option>
+				<option value="3">032</option>
+				<option value="4">064</option>
+			</select> <select size="3" name="selmulti">
+				<option value="1">검색</option>
+				<option value="2">이름</option>
+				<option value="3">내용</option>
+				<option value="4">작성자</option>
+			</select>
+
+		</fieldset>
+
+		<fieldset>
+			<legend>여러 줄 입력</legend>
+			<textarea rows="5" cols="100" name="textarea"></textarea>
+		</fieldset>
+
+		<fieldset>
+			<legend>입력 글자수 제한</legend>
+			<input type="text" name="txt" maxlength="5">
+		</fieldset>
+
+		<fieldset>
+			<legend>보이지 않는 input</legend>
+			<input type="hidden" name="hidden" value="5">
+
+		</fieldset>
+		<input type="submit" value="서버전송">
+	</form>
+
+</body>
+</html>

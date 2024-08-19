@@ -1,0 +1,13 @@
+@charset "UTF-8";
+ 	b {
+		font-size: 12pt;
+	}
+	table tr td, table tr th {
+		border: 1px solid;
+	} 
+	table {
+        margin-top: 0;
+        margin-bottom: 0;
+		border: 1px solid;
+    }
+    

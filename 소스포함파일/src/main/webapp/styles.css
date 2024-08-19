@@ -1,0 +1,14 @@
+@charset "UTF-8";
+.mainDiv {
+	display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: stretch; /* 세로 중앙 정렬 */
+    margin-top: 70px; /* 상단과 하단에 여백 추가 */
+    margin-left: 10vh;
+    flex-direction: column; /* 요소들을 세로로 정렬 */
+	border: 1px solid;
+	width: 75%;
+}
+.subDiv {
+	width: 90%;
+}

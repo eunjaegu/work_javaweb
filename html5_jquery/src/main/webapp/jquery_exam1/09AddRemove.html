@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+ 
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <title>스타일 추가/제거</title>
+
+    <style type="text/css">
+        .yellowBorder{ background-color: yellow; border:1px solid red }
+    </style>
+
+  
+
+    <script src="jquery-1.6.2.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(
+          function() {
+
+              $('#btnClick')
+
+              .bind("mouseover", function() {$('#btnClick').addClass('yellowBorder') })
+
+              .bind("mouseout", function() {$(this).removeClass('yellowBorder')});
+
+          });
+    </script>
+</head>
+
+<body>
+<div id="btnClick">
+    마우스를 올려보세요!!!
+</div>
+</body>
+
+</html>
+
+

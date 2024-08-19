@@ -1,0 +1,31 @@
+USE test;
+
+DROP TABLE  tblPollList;
+
+CREATE TABLE tblPollList (
+	  num int(4) NOT NULL auto_increment,
+	  question varchar(100)  DEFAULT '' NOT NULL,
+	  sdate date DEFAULT NULL,
+	  edate date DEFAULT NULL,
+	  wdate date DEFAULT NULL,
+	  type int(4)  DEFAULT 1 NOT NULL,
+	  active int(4) DEFAULT 1,
+	  PRIMARY KEY (num)
+);
+
+DROP TABLE  tblPollItem;
+
+CREATE TABLE tblPollItem (
+	  listnum int(4) NOT NULL,
+	  itemnum int(4) DEFAULT 0 NOT NULL ,
+	  item varchar(50) DEFAULT '' NOT NULL ,
+	  count int(4) DEFAULT 0 NOT NULL,
+	  PRIMARY KEY (listnum, itemnum)
+); 
+
+
+SELECT * FROM tblPollList;
+
+SELECT * FROM tblPollItem;
+
+

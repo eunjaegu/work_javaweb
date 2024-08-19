@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+
+		});
+		
+		function addImage() {
+		//	$("div").html("<img src='../image/duke.png'>");
+		//	$("div").before("<img src='../image/duke.png'>");
+			$("div").append("<img src='../image/duke.png'>");
+		}
+	</script>
+</head>
+<body>
+	<div>
+	<div></div>
+	<div></div>
+		<input type="button" value="이미지추가" onclick="addImage()">
+	</div>
+</body>
+</html>

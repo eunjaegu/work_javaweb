@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>DOM 요소의 앞/뒤에 요소추가</title>
+
+    <style type="text/css">
+        .Chapter { background-color:Silver; }
+        .Content { height:100px; border:1px solid red; }
+    </style>
+
+    <script src="jquery-1.6.2.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            //[1] 내용 뒤에 구분선(<hr />) 삽입
+            $('<hr />').insertAfter(".Content");
+
+            //[2] TOP 링크를 Chapter 앞에 추가
+            $('p.Chapter:gt(0)').before("<a href='#'>TOP</a>");
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <p class="Chapter">1 장</p>
+    <div class="Content">
+    내용...
+    </div>
+
+    <p class="Chapter">2 장</p>
+    <div class="Content">
+    내용...
+    </div>
+
+    <p class="Chapter">3 장</p>
+    <div class="Content">
+    내용...
+    </div>
+
+</body>
+
+</html> 
+

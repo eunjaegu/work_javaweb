@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>마우스 오버시 큰 이미지 보여주기</title>
+
+    <script src="jquery-1.6.2.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            // 아래 코드는 모든 이미지 파일의 이미지명을 얻어,
+            // bigs/ 폴더에 있는 동일한 이미지를 div에 보여준다.
+            $('#product img').mouseover(function() {
+
+                $("#showImage").show(); // 이미지 보여줄 레이어 보이기
+
+                var imgSrc = ""; // 이미지 소스 저장 변수
+
+                imgSrc = $(this).attr("src"); // attr()로 src get하기
+
+                //imgSrc = imgSrc.substr(imgSrc.lastIndexOf("/") + 1); // 순수 파일명만 얻기
+
+                imgSrc = "<img src='imgSrc' />";// 큰이미지 설정
+
+                $("#showImage").html(imgSrc); // 레이어에 HTML추가
+
+            });
+
+            // 마우스 오버시 레이어 숨기기
+            $('#product img').mouseout(function() {
+
+                $("#ShowImage").hide(); // 레이어 숨기기
+
+            });
+
+        });
+    </script>    
+
+</head>
+
+<body>
+
+<div id="product">
+    <img src="ico_go_up_s.gif" />    
+    <img src="ico_go_down_s.gif" />    
+
+    <div id="showImage"
+        style="border:1px solid red;width:400px;height:400px;">
+    </div>
+
+</div>
+
+</body>
+
+</html>
+
+

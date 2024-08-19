@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>첫 화면</title>
+</head>
+
+<body>
+	메인 화면 <br /> <!-- br은 줄바꿈 태그 -->
+	
+	<!-- 서버에 데이터 전송 : form 
+		form 태그 : action	: 데어티 전달 대상(WebServlet이름, jsp)
+					method 	: 전송방식 (get / post)
+	-->
+	<form action="#", method="post">
+		<!-- 폼에 관련된 태그들 -->
+		<input type = "text" name="id" required="required"/>
+		<input type = "text" name="pw" readonly="readonly"/>
+
+		<!-- 실제 서버로 입력 데이터들을 전송하는 버튼 -->
+		<input type = "submit" value="서버로 전송" />
+		
+		<!-- 입력 데이터들을 초기화하는 버튼 -->
+		<input type = "reset" value="입력값 취소" />
+		
+		
+	</form>
+</body>
+</html>

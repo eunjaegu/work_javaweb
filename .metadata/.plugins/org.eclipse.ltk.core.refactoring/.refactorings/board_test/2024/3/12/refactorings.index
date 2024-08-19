@@ -1,0 +1,8 @@
+1710806352867	Move 'detail.jsp' to 'webapp'
+1710806356515	Move 'insert.jsp' to 'webapp'
+1710806357852	Move 'join.jsp' to 'webapp'
+1710806359369	Move 'list.jsp' to 'webapp'
+1710806360641	Move 'main.jsp' to 'webapp'
+1710806362032	Move 'modify.jsp' to 'webapp'
+1710806445306	Move 'web.xml' to 'WEB-INF'
+1710806508903	Delete element

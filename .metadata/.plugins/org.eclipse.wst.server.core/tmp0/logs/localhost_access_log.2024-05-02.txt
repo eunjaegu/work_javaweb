@@ -1,0 +1,5 @@
+127.0.0.1 - - [02/May/2024:15:01:05 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [02/May/2024:15:01:05 +0900] "GET /dto_dao_board_complete/ HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [02/May/2024:15:01:06 +0900] "GET /dto_dao_board_complete/board/boardListServlet HTTP/1.1" 200 3825
+0:0:0:0:0:0:0:1 - - [02/May/2024:15:01:06 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [02/May/2024:15:01:10 +0900] "GET /dto_dao_board_complete/board/boardListServlet?searchType=SUBJECT&searchText= HTTP/1.1" 200 3872

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- bean이 사용할 라이브러리 -->
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:p="http://www.springframework.org/schema/p" 
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+http://www.springframework.org/schema/aop 
+http://www.springframework.org/schema/aop/spring-aop-3.0.xsd 
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context-3.0.xsd"> 
+
+	<!-- 1. id : 다른 빈과 구성요소에서 이를 참조할 수 있도록 빈에 식별자 할당(별명 빈~)
+			class : 빈의 구현 클래스의 완전한 이름 지정(이름 : 현 빈)-->
+	<bean id="simpleUrlController" class="com.ej.spring.ex01.SimpleUrlController"/>
+
+	<!-- 2. class : SimpleUrlHandlerMapping로 빈의 구현으로 사용함을 나타냄.
+			<property> : 빈의 속성을 설정 / <props> : Properties 타입의 속성을 정의
+			-->
+	
+	<bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping"> 
+		<property name="mappings">
+			<props>
+			<!-- /test/index.do URL 패턴은 simpleUrlController 빈에 매핑됩니다. -->
+				<prop key="/test/index.do">simpleUrlController</prop>			
+			</props>
+		</property>
+	</bean>
+</beans> 
+

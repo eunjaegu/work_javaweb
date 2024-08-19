@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+
+<!-- memberService라는 빈(bean)을 정의하고 있습니다. 이 빈은 MemberServiceImpl 클래스의 인스턴스를 생성 -->
+<!-- MemberServiceImpl 클래스의 memberDAO라는 프로퍼티(property)를 설정합니다. 
+이 프로퍼티는 memberDAO라는 이름의 다른 빈을 참조(ref)합니다. 
+이는 의존성 주입(dependency injection)의 한 형태로, memberService 빈이 memberDAO 빈을 사용 -->
+<beans>
+	<bean id="memberService" class="com.ej.spring.ex02.MemberServiceImpl">
+		<property name="memberDAO" ref="memberDAO"></property>
+	</bean>
+	<bean id="memberDAO" class="com.ej.spring.ex02.MemberDAOImpl">
+	</bean>
+
+</beans>

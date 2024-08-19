@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>05_input.html</title>
+<style>
+
+</style>
+
+	<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			//$('#btn').click(function() {
+			$('#btn').one("click", function() {
+				$('#copyID').val($('#txtID').val());
+				//							  1
+				//			  2
+			});
+		});
+	</script>	
+</head>
+<body>
+	아이디 : <input type="text" id="txtID">
+	<hr>
+	아이디 복사 : <input type="text" id="copyID">
+	<hr>
+	<input type="button" value="copy" id="btn">
+	<hr>
+</body>
+</html>

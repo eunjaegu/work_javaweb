@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<!-- lazy-init="false" : 게으르게 초기화되지 않고, 컨테이너가 시작될때 즉시 생성되고 초기화 -->
+<!-- lazy-init="default" : 기본설정  Spring의 전역 설정에 의해 결정, 기본적으로 모든 빈은 게으르게 초기화 -->
+<!-- lazy-init="true" : secondBean과 동일하게 작동하지만, 명시적으로 표시하여 명확하게 만들어줍니다. 
+	필요한 경우에만 초기화되기 때문에 메모리 사용량을 줄이고 애플리케이션 시작 시간을 최적화하는 데 도움 -->
+<beans>
+	<bean id="firstBean" class="com.ej.spring.ex03.First" lazy-init="false"></bean>
+	<bean id="secondBean" class="com.ej.spring.ex03.Second" lazy-init="default"></bean>
+	<bean id="thirdBean" class="com.ej.spring.ex03.Third" lazy-init="true"></bean>
+
+</beans>

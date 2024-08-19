@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>03_even_odd.html</title>
+<style>
+	.red{background:red}
+	.green{color:green}
+	.blue{background:blue}
+</style>
+
+	<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('tr:odd').addClass('red');
+			$('tr:even').addClass('blue');
+			
+			$("td:contains('3')").addClass('green');
+		});
+	</script>	
+</head>
+<body>
+	<table width="100">
+		<tr><td>0</td></tr>
+		<tr><td>1</td></tr>
+		<tr><td>2</td></tr>
+		<tr><td>3</td></tr>
+	</table>
+
+</body>
+</html>

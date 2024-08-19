@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ajax 연습2 xml 전송: ajax2.html</title>
+	<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script>
+		function process(){
+				//$: jQuery 객체를 의미. document.~ $로 표현할 수 있다.
+				$.ajax({
+					type:"post",
+					async:"false",
+					url:"http://localhost:9000/html5_jquery/ajaxTest2",
+					dataType:"xml",
+					
+					success:function(info, textStatus){
+						//servlet 끝난 후에 함. info로 들어와 여기서 꺼냄
+						//each() = for문 내부에 여러개 처리할 수 있는 함수인 특징
+						//$(info) : <main><book>~~~~</main></book> book을 찾으면 넘겨주는것 반복적으로 넘겨줘서 for 문 
+						//.find("book")	: <book>~~~~</book>
+						//.each(function(){}), : for(	:	){}  // each 는 앞에서 뒤로 넘겨줌
+						$(info).find("book").each(function(){	
+							//$this : <book>~~~~</book>
+							//find("title") : <title>~~~~</title>
+							//.text() : 텍스트추출
+							var title=$(this).find("title").text();
+							var writer=$(this).find("writer").text();
+							var image=$(this).find("image").text();
+							
+							$("#bookinfo").append(
+								"<p>" + title + "</p>" + 	
+								"<p>" + writer + "</p>" + 	
+								"<img src=" + image + " />"  	//띄어쓰기해야함
+							);
+						}); //.each end
+						
+					},
+					
+					
+					error:function(data, textStatus){
+						alert("에러 발생");
+						
+					},
+					
+					complete:function(data, textStatus){
+						alert("작업 완료");			//try catch finally 와 비슷
+					}
+			});
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="도서정보요청" onclick="process()">
+	<div id="bookinfo"></div>	<!-- 서버로부터 응답 메시지 출력 -->
+</body>
+</html>

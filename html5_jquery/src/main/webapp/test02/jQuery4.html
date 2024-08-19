@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+
+		});
+
+		function process(){
+			var value=$("#t_input").val();	// 값 추출
+			$("#t_output").val(value);		// 값 설정
+		}
+	</script>
+</head>
+<body>
+		<input type="text" id="t_input">
+		<input type="button" value="입력" onclick="process()">
+		<hr>
+		결과 : <input type="text" id="t_output" disabled>
+
+</body>
+</html>

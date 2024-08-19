@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ID 셀렉터 연습1 ready() : jQuery1.html</title>
+	<!-- 1. jQuery1 라이브러리(자바스크립트 함수모음) -->
+	<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+	
+	<!-- 2. jQuery 사용 -->
+	<script>
+		// 1. jQuery객체
+		// 2. jQuery객체 준비완료
+		// 3. jQuery 함수 사용
+		$(document).ready(function(){
+			// 기타 등등~
+			alert($("p").text());
+			//html(), text() 는 지정한 객체의 시작 끝 태그 사이의 요소를 추출
+		});	//jQuery를 사용하기 위한 기본 구문
+	
+	</script>
+</head>
+<body>
+	<div class="calss1">안녕??</div>
+	<div id="unique1">제이쿼리</div>
+	<div id="unique2"><p>쉬운 제이쿼리</p></div>
+</body>
+</html>
